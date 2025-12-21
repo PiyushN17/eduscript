@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="semester">
+        <select id="sem">
+            <option value="" selected disabled>Select Semester</option>
+            <option value="1">1st Semester</option>
+            <option value="2" disabled>2nd Semester</option>
+            <option value="3" disabled>3rd Semester</option>
+            <option value="4" disabled>4th Semester</option>
+        </select>
+        <button id="subSem">Next</button>
+    </div>
+    
+    <div id="subjects" hidden>
+        <select id="cat">
+            <option value="" selected disabled>Select Subject</option>
+            <option value="eng">COMMUNICATIVE ENGLISH</option>
+            <option value="it">INFORMATION TECHNOLOGY AND APPLICATION</option>
+            <option value="pmo">PRINCIPLES OF MANAGEMENT & ORGANIZATION</option>
+            <option value="pst">PROBLEM SOLVING TECHNIQUES</option>
+        </select>
+        <button id="subSub">Next</button>
+    </div>
+
+    <div id="container2" hidden>
+        <p id="points"></p>
+        <p id="question">Question: </p>
+        <p id="diffLevel">Difficulty Level: </p>
+        <div id="allOpt">
+            <input type="radio" name="answer" id="opt1" value="0">
+            <label for="opt1" id="firstOpt"></label>
+
+            <input type="radio" name="answer" id="opt2" value="1">
+            <label for="opt2" id="secOpt"></label>
+            <br>
+            <input type="radio" name="answer" id="opt3" value="2">
+            <label for="opt3" id="thirdOpt"></label>
+
+            <input type="radio" name="answer" id="opt4" value="3">
+            <label for="opt4" id="fourthOpt"></label>
+            <br>
+            <button id="ansSub" disabled>Next</button>
+        </div>
+        <p id="subErr"></p>
+    </div>
+    
+    <div id="summary">
+        <div id="leaderboard" hidden>
+            <h3>Summary of this category</h3>
+            <h2 id="winner"></h2>
+            <p id="play1"></p>
+            <p id="play2"></p>
+            <button id="anotherCategory">Next Round</button>
+            <button id="end">End Game</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
