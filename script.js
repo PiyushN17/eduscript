@@ -18,6 +18,7 @@ let opt2 = document.getElementById('opt2');
 let opt3 = document.getElementById('opt3');
 let opt4 = document.getElementById('opt4');
 let ansSub = document.getElementById('ansSub');
+let loader = document.getElementById('loader');
 
 let containArr = [];
 let i = 0;
@@ -34,21 +35,25 @@ subSem.addEventListener('click', function() {
 subSub.addEventListener('click', async function() {
     if(cat.value === 'eng') {
         subjects.hidden = true;
+        loader.hidden = false;
         let engURL = 'https://pebrrhnnhjgkwhxbyunt.supabase.co/storage/v1/object/sign/API%20Data/BCA-301/1st%20Semester/CE/Quiz/Quiz-CE.txt?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MmZjNTBiYy0zNDI2LTQzZTYtYThkNy0zNDgxMDU2OWE5M2IiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBUEkgRGF0YS9CQ0EtMzAxLzFzdCBTZW1lc3Rlci9DRS9RdWl6L1F1aXotQ0UudHh0IiwiaWF0IjoxNzY2MzMwOTk5LCJleHAiOjE3OTc4NjY5OTl9.mo2rVo3vOYJ0iAQznKiEgH33O0cPSThaxqFgcA0fnpE';
         await callQues(engURL);
     }
     else if(cat.value === 'it') {
         subjects.hidden = true;
+        loader.hidden = false;
         let itURL = 'https://pebrrhnnhjgkwhxbyunt.supabase.co/storage/v1/object/sign/API%20Data/BCA-301/1st%20Semester/IT&A/Quiz/Quiz-IT&A.txt?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MmZjNTBiYy0zNDI2LTQzZTYtYThkNy0zNDgxMDU2OWE5M2IiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBUEkgRGF0YS9CQ0EtMzAxLzFzdCBTZW1lc3Rlci9JVCZBL1F1aXovUXVpei1JVCZBLnR4dCIsImlhdCI6MTc2NjMzMzg3OCwiZXhwIjoxNzk3ODY5ODc4fQ.MloBTqRerDAFDBTq3zhl0Ocxf3FFNrF-Eg8-W9FCP3U';
         await callQues(itURL);
     }
     else if(cat.value === 'pmo') {
         subjects.hidden = true;
+        loader.hidden = false;
         let pmoURL = 'https://pebrrhnnhjgkwhxbyunt.supabase.co/storage/v1/object/sign/API%20Data/BCA-301/1st%20Semester/PMO/Quiz/PMO-Quiz.txt?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MmZjNTBiYy0zNDI2LTQzZTYtYThkNy0zNDgxMDU2OWE5M2IiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBUEkgRGF0YS9CQ0EtMzAxLzFzdCBTZW1lc3Rlci9QTU8vUXVpei9QTU8tUXVpei50eHQiLCJpYXQiOjE3NjYzMzQyNDAsImV4cCI6MTc5Nzg3MDI0MH0.QZDuDdivOHpccmHvqf6LRtwuIHLPFzEsKpeAcDJw_lI';
         await callQues(pmoURL);
     }
     else if(cat.value === 'pst') {
         subjects.hidden = true;
+        loader.hidden = false;
         let pstURL = 'https://pebrrhnnhjgkwhxbyunt.supabase.co/storage/v1/object/sign/API%20Data/BCA-301/1st%20Semester/PST/Quiz/Quiz-PST.txt?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MmZjNTBiYy0zNDI2LTQzZTYtYThkNy0zNDgxMDU2OWE5M2IiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBUEkgRGF0YS9CQ0EtMzAxLzFzdCBTZW1lc3Rlci9QU1QvUXVpei9RdWl6LVBTVC50eHQiLCJpYXQiOjE3NjYzMzQ0ODIsImV4cCI6MTc5Nzg3MDQ4Mn0.zrvo86MmZPGH3MJzGP0PGDp1Uony-VGtFB6-p_vEiOI';
         await callQues(pstURL);
     }
@@ -70,6 +75,7 @@ async function callQues(URL) {
 }
 
 function updatePage() {
+    loader.hidden = true;
     if (i >= containArr.length || i < 0) {
         showScoreSummary();
         return;
