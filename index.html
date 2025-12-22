@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduScript | Transform Your Learning Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-decoration">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="header">
+        <div class="lefthead">
+            <div class="bookicon">
+                <img src="contents/book.png" alt="Logo">
+                <div class="logo-glow"></div>
+            </div>
+            <div class="bookfont">EduScript</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="intro-content">
+                <span class="skillup-tag">
+                    <i class="fas fa-sparkles"></i>
+                    Welcome to EduScript
+                </span>
+                <h1 class="hero-heading">
+                    PLATFORM FOR <br>
+                    <span class="highlight">SKILL AND LEARNING</span>
+                </h1>
+                <p class="hero-description">
+                    Master your exams with AI-powered study modes, interactive quizzes, and real exam simulations. Your success starts here.
+                </p>
+                <div class="hero-btns">
+                    <button class="btn-primary" id="start">
+                        <span>Start Learning!</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-secondary" id="explore">
+                        <i class="fas fa-compass"></i>
+                        <span>Explore Courses</span>
+                    </button>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <h3>10K+</h3>
+                        <p>Active Students</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Courses</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-image">
+                <div class="image-wrapper">
+                    <img src="contents/study.jpg" alt="Study Session">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-trophy"></i>
+                        <span>Top Performer</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-clock"></i>
+                        <span>Study Timer</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Progress Track</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popup -->
+        <div class="overlay" id="popupOverlay">
+            <div class="popup">
+                <button class="popup-close-icon">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h3>Choose Your Learning Mode</h3>
+                <p class="popup-subtitle">Select the perfect mode to match your learning goals</p>
+                
+                <div class="option">
+                    <div class="option">
+                        <a href="/2/index.html" style="width: 100%;">
+                            <button class="popup-btn study-mode">
+                                <i class="fas fa-book-open"></i>
+                                <span>Study Mode</span>
+                            </button>
+                        </a>
+                        <div class="info-wrapper">
+                            <i class="fas fa-info-circle info"></i>
+                            <span class="info-text">Study Mode helps students understand important exam questions along with concept clarity. Students can view structured, university-oriented solutions to learn what to write and how to write in exams.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="option">
+                        <a href="/1/index.html" style="width: 100%;">
+                            <button class="popup-btn revision-mode">
+                                <i class="fas fa-sync-alt"></i>
+                                <span>Revision Mode</span>
+                            </button>
+                        </a>
+                        <div class="info-wrapper">
+                            <i class="fas fa-info-circle info"></i>
+                            <span class="info-text">Revision Mode uses quiz-based questions to test recall and understanding. Students receive marks and feedback at the end to identify weak areas and improve retention.</span>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <a href="/3/index.html" style="width: 100%;">
+                            <button class="popup-btn exam-mode">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Exam Mode</span>
+                            </button>
+                        </a>
+                        <div class="info-wrapper">
+                            <i class="fas fa-info-circle info"></i>
+                            <span class="info-text">Exam Mode simulates a real end-semester examination with a 3-hour timer. Solutions remain locked during the exam and are revealed only after completion, helping students practice time management and exam pressure.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="close-popup">
+                    <span>Maybe Later</span>
+                </button>
+            </div>
+        </div>
+
+        <section class="topics-section">
+            <div class="section-header">
+                <h2 class="section-title">Explore Topics With Precision</h2>
+                <p class="section-subtitle">Dive deep into specialized subjects with expert-curated content</p>
+            </div>
+            <div class="grid-container">
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/bookopen.png" alt="Nutrition">
+                    </div>
+                    <h5>Books</h5>
+                    <p>Learn healthy eating habits</p>
+                </div>
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/graduation-hat.png" alt="Chemistry">
+                    </div>
+
+                    <h5>Graduation</h5>
+                    <p>Master chemical concepts</p>
+                </div>
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/lightbulb.png" alt="Dental">
+                    </div>
+                    <h5>Light Bulb</h5>
+                    <p>Oral health essentials</p>
+                </div>
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/brain.png" alt="Animal">
+                    </div>
+                    <h5>Learn Quickly</h5>
+                    <p>Learn concepts quickly with our quiz</p>
+                </div>
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/clipboard.png" alt="Animal">
+                    </div>
+                    <h5>Clipboard </h5>
+                    <p>LifCaree science fundamentals</p>
+                </div>
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/certificate.png" alt="Animal">
+                    </div>
+                    <h5>Certificate</h5>
+                    <p>Healthcare knowledge</p>
+                </div>
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/target.png" alt="Animal">
+                    </div>
+                    <h5>Target</h5>
+                    <p>Protect our planet</p>
+                </div>
+                <div class="topic-box">
+                    <div class="topic-icon-wrapper">
+                        <img src="contents/reading.png" alt="Animal">
+                    </div>
+                    <h5>Reading</h5>
+                    <p>Scientific approach</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose EduScript?</h2>
+                <p class="section-subtitle">Everything you need for academic excellence in one platform</p>
+            </div>
+            <div class="grid-container">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <img src="contents/clock.png" alt="Time">
+                    </div>
+                    <h4>Time Saving</h4>
+                    <p>A Smart Investment in Your Future</p>
+                    <span class="feature-badge">Efficient</span>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <img src="contents/pc.png" alt="Online">
+                    </div>
+                    <h4>All Online</h4>
+                    <p>Seamless Savings in Time</p>
+                    <span class="feature-badge">24/7 Access</span>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <img src="contents/medal.png" alt="Quality">
+                    </div>
+                    <h4>Quality Courses</h4>
+                    <p>Unparalleled Course Quality</p>
+                    <span class="feature-badge">Premium</span>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <img src="contents/card.png" alt="Payment">
+                    </div>
+                    <h4>Easy Payment</h4>
+                    <p>Affordability at Your Fingertips</p>
+                    <span class="feature-badge">Flexible</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h3>Do you need more information?</h3>
+                <p>Connect with us today. Our experts are here to solve your problems and guide your learning journey.</p>
+            </div>
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <img src="contents/gmail.png" alt="Email">
+                    <span>piyush.nath1710@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <img src="contents/phone-call.png" alt="Phone">
+                    <span>+91 9123121994</span>
+                </div>
+                <button class="support-btn">
+                    <i class="fas fa-headset"></i>
+                    <span>Connect to support</span>
+                </button>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom">
+            <p>Follow us on social media</p>
+            <div class="social-icons">
+                <a href="#"><img src="contents/figma.png" alt="Figma"></a>
+                <a href="#"><img src="contents/linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="contents/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="contents/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 EduScript. All rights reserved. | Made with <i class="fas fa-heart"></i> for learners</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

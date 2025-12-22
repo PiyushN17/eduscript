@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Mode | EduScript</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="lefthead">
+            <div class="bookicon">
+                <img src="contents/book.png" alt="Logo">
+                <div class="logo-glow"></div>
+            </div>
+            <div class="bookfont">EduScript</div>
+        </div>
+        <nav class="righthead">
+            <a href="#" class="nav-link">Course</a>
+            <a href="#" class="nav-link">Features</a>
+            <a href="#" class="nav-link">Contact</a>
+            <button class="download">
+                <span>Download Application</span>
+                <i class="fas fa-download"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="particle-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Semester Selection -->
+        <div id="semester" class="card-container">
+            <div class="card-header">
+                <div class="icon-wrapper">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h1>Revision Mode</h1>
+                <p class="subtitle">Test your knowledge with interactive quizzes</p>
+            </div>
+
+            <div class="form-group">
+                <label for="sem" class="input-label">
+                    <i class="fas fa-calendar-alt"></i>
+                    Select Semester
+                </label>
+                <select id="sem" class="custom-select">
+                    <option value="" selected disabled>Choose your semester...</option>
+                    <option value="1">1st Semester</option>
+                    <option value="2" disabled>2nd Semester (Coming Soon)</option>
+                    <option value="3" disabled>3rd Semester (Coming Soon)</option>
+                    <option value="4" disabled>4th Semester (Coming Soon)</option>
+                    <option value="5" disabled>5th Semester (Coming Soon)</option>
+                    <option value="6" disabled>6th Semester (Coming Soon)</option>
+                </select>
+            </div>
+
+            <button id="subSem" class="btn-primary">
+                <span>Continue</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Subject Selection -->
+        <div id="subjects" class="card-container" hidden>
+            <div class="card-header">
+                <div class="icon-wrapper">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h1>Select Subject</h1>
+                <p class="subtitle">Choose a subject to begin your revision</p>
+            </div>
+
+            <div class="form-group">
+                <label for="cat" class="input-label">
+                    <i class="fas fa-clipboard-list"></i>
+                    Available Subjects
+                </label>
+                <select id="cat" class="custom-select">
+                    <option value="" selected disabled>Choose your subject...</option>
+                    <option value="eng">Communicative English</option>
+                    <option value="it">Information Technology & Application</option>
+                    <option value="pmo">Principles of Management & Organization</option>
+                    <option value="pst">Problem Solving Techniques</option>
+                </select>
+            </div>
+
+            <button id="subSub" class="btn-primary">
+                <span>Start Quiz</span>
+                <i class="fas fa-play"></i>
+            </button>
+
+            <button class="btn-back"
+                onclick="document.getElementById('subjects').hidden=true; document.getElementById('semester').hidden=false;">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back</span>
+            </button>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader-container" hidden>
+            <div class="loader">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-text">Loading Questions...</div>
+            </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="container2" class="quiz-container" hidden>
+            <!-- Progress Bar -->
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">Question 1 of 30</span>
+            </div>
+
+            <!-- Score Display -->
+            <div id="points" class="score-display">
+                <div class="score-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="score-text">
+                    <span class="score-label">Score</span>
+                    <span class="score-value">0/60</span>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="question-card">
+                <div class="question-header">
+                    <span id="diffLevel" class="difficulty-badge">
+                        <i class="fas fa-signal"></i>
+                        Difficulty: Medium
+                    </span>
+                </div>
+                <p id="question" class="question-text">
+                    <i class="fas fa-question-circle"></i>
+                    Question: Loading...
+                </p>
+            </div>
+
+            <!-- Options -->
+            <div id="allOpt" class="options-container">
+                <div class="option-wrapper">
+                    <input type="radio" name="answer" id="opt1" value="0">
+                    <label for="opt1" class="option-label">
+                        <span class="option-letter">A</span>
+                        <span id="firstOpt" class="option-text"></span>
+                        <span class="option-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="option-wrapper">
+                    <input type="radio" name="answer" id="opt2" value="1">
+                    <label for="opt2" class="option-label">
+                        <span class="option-letter">B</span>
+                        <span id="secOpt" class="option-text"></span>
+                        <span class="option-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="option-wrapper">
+                    <input type="radio" name="answer" id="opt3" value="2">
+                    <label for="opt3" class="option-label">
+                        <span class="option-letter">C</span>
+                        <span id="thirdOpt" class="option-text"></span>
+                        <span class="option-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="option-wrapper">
+                    <input type="radio" name="answer" id="opt4" value="3">
+                    <label for="opt4" class="option-label">
+                        <span class="option-letter">D</span>
+                        <span id="fourthOpt" class="option-text"></span>
+                        <span class="option-check">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <button id="ansSub" class="btn-submit" disabled>
+                    <span>Next Question</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <p id="subErr" class="error-message"></p>
+        </div>
+
+        <!-- Summary/Leaderboard -->
+        <div id="summary">
+            <div id="leaderboard" class="leaderboard-container" hidden>
+                <div class="celebration">
+                    <i class="fas fa-trophy trophy-icon"></i>
+                </div>
+                <h3>Quiz Complete!</h3>
+                <h2 id="winner" class="winner-text"></h2>
+                <div class="stats-grid">
+                    <p id="play1" class="stat-item"></p>
+                    <p id="play2" class="stat-item"></p>
+                </div>
+                <div class="button-group">
+                    <button id="anotherCategory" class="btn-primary">
+                        <i class="fas fa-redo"></i>
+                        <span>Next Round</span>
+                    </button>
+                    <button id="end" class="btn-secondary">
+                        <i class="fas fa-home"></i>
+                        <span>End Game</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
