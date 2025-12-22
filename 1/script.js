@@ -18,7 +18,6 @@ let opt2 = document.getElementById('opt2');
 let opt3 = document.getElementById('opt3');
 let opt4 = document.getElementById('opt4');
 let ansSub = document.getElementById('ansSub');
-let loader = document.getElementById('loader');
 
 let progressFill = document.getElementById('progressFill');
 let progressText = document.getElementById('progressText');
@@ -54,7 +53,6 @@ subSub.addEventListener('click', async function() {
   
   if(urlMap[cat.value]) {
     subjects.hidden = true;
-    loader.hidden = false;
     await callQues(urlMap[cat.value]);
   }
 });
@@ -67,12 +65,10 @@ async function callQues(URL) {
     containArr = response;
     totalQuestions = containArr.length;
     
-    loader.hidden = true;
     container2.hidden = false;
     updatePage();
   }
   catch(e) {
-    loader.hidden = true;
     subErr.innerText = 'Error loading questions: ' + e.message;
     subErr.style.display = 'block';
   }
