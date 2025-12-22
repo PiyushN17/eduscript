@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduScript - Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div id="selector">
+            <select id="course">
+                <option value="" selected disabled>Select Course</option>
+                <option value="bca">BCA</option>
+                <option value="bba" disabled>BBA</option>
+                <option value="pgdm" disabled>PGDM</option>
+            </select>
+            <select id="semester">
+                <option value="" selected disabled>Select Semester</option>
+                <option value="1">1st Semester</option>
+                <option value="2" disabled>2nd Semester</option>
+                <option value="3" disabled>3rd Semester</option>
+                <option value="4" disabled>4th Semester</option>
+                <option value="5" disabled>5th Semester</option>
+                <option value="6" disabled>6th Semester</option>
+            </select>
+            <select id="marks">
+                <option value="" selected disabled>Select Question Type</option>
+                <option value="short">MCQ/Very Short Q/A (2 Marks)</option>
+                <option value="mshort">Short Q/A (4 Marks)</option>
+                <option value="long">Long Q/A (12 Marks)</option>
+            </select>
+            <button id="submitBtn">Submit</button>
+        </div>
+
+        <p id="error"></p>
+
+        <div id="container" hidden>
+            <div id="sem1" hidden>
+                <div class="subject-item">
+                    <span>COMMUNICATIVE ENGLISH</span>
+                    <button class="start-btn" id="comEng">Start Learning</button>
+                </div>
+
+                <div class="subject-item">
+                    <span>INFORMATION TECHNOLOGY AND APPLICATION</span>
+                    <button class="start-btn" id="it">Start Learning</button>
+                </div>
+
+                <div class="subject-item">
+                    <span>PRINCIPLES OF MANAGEMENT & ORGANIZATION</span>
+                    <button class="start-btn" id="pmo">Start Learning</button>
+                </div>
+
+                <div class="subject-item">
+                    <span>PROBLEM SOLVING TECHNIQUES</span>
+                    <button class="start-btn" id="pst">Start Learning</button>
+                </div>
+
+                <div class="subject-item">
+                    <span>BASIC MATHEMATICS</span>
+                    <button class="start-btn" disabled>Start Learning</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="loader" hidden></div>
+
+        <div id="contentShow" hidden>
+            <div class="content-info">
+                <p id="quesText">Question</p>
+                <p id="quesMarks">Marks</p>
+                <p id="quesImp">Importance</p>
+                <p id="quesProb">Probability (Exam)</p>
+                <p id="quesSub">Subject</p>
+                <p id="quesCour">Course</p>
+                <p id="quesP1"></p>
+            </div>
+            <div class="content-controls">
+                <button id="quesPrev">Previous Question</button>
+                <button id="nextQues">Next Question</button>
+            </div>
+        </div>
+
+        <div id="pager" hidden>
+            <div id="textMeasurer"></div>
+
+            <div class="book">
+                <div class="page" id="page">
+                    <div class="front">
+                        <img src="page.png" alt="Page">
+                        <div class="ink" id="ques"></div>
+                        <div class="ink" id="ans"></div>
+                    </div>
+
+                    <div class="back">
+                        <img src="page.png" alt="Page">
+                        <div class="ink" id="quesBack"></div>
+                        <div class="ink" id="ansBack"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prevBtn" disabled>Previous</button>
+                <span id="pageIndicator">Page 1 / ?</span>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

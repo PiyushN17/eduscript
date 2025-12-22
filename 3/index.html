@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Mode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="timerBar">
+  ⏳ Time Remaining: <span id="timer">03:00:00</span>
+</div>
+<div id="pageCourse" class="card">
+  <h2>Exam Mode</h2>
+  <select id="course">
+    <option disabled selected>Select Course</option>
+    <option>BCA</option>
+  </select>
+  <button id="toSemester">Next</button>
+</div>
+
+<div id="pageSemester" class="card" hidden>
+  <select id="semester">
+    <option disabled selected>Select Semester</option>
+    <option value="1">1st Semester</option>
+  </select>
+  <button id="toSubject">Next</button>
+</div>
+
+<div id="pageSubject" class="card" hidden>
+  <select id="subject">
+    <option value="" selected disabled>Select Subject</option>
+    <option value="ce">Communicative English</option>
+    <option value="ita" disabled>Information Technology & Applications</option>
+    <option value="pmo" disabled>Principles of Management & Organization</option>
+    <option value="pst">Problem Solving Techniques</option>
+  </select>
+  <button id="openPopup">Next</button>
+</div>
+
+<div id="popup">
+  <div class="popupBox">
+    <h3>⚠️ Important Instructions</h3>
+    <ul>
+      <li>Exam duration is 3 hours</li>
+      <li>Solutions unlock only after 3 hours</li>
+      <li>Leaving or closing tab resets exam</li>
+      <li>Timer cannot be paused</li>
+    </ul>
+
+    <label>
+      <input type="checkbox" id="agree">
+      I am ready to give the next 3 hours
+    </label>
+
+    <button id="startExamBtn" disabled>Start Test</button>
+  </div>
+</div>
+
+<div id="examPaper" hidden>
+  <div id="paperHeader"></div>
+  <div id="instructions"></div>
+  <div id="questions"></div>
+  <button id="showSolution" disabled>🔒 Show Solution</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
