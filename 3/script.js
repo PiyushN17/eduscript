@@ -22,7 +22,6 @@ const startExamBtn = document.getElementById("startExamBtn");
 const timerBar = document.getElementById("timerBar");
 const timerText = document.getElementById("timer");
 
-const loader = document.getElementById("loader");
 
 const paperHeader = document.getElementById("paperHeader");
 const instructionsBox = document.getElementById("instructions");
@@ -89,7 +88,6 @@ startExamBtn.addEventListener("click", async () => {
   popup.style.display = "none";
   pageSubject.hidden = true;
   timerBar.style.display = "block";
-  loader.hidden = false;
 
   startTimer();
   await loadExamPaper();
@@ -126,10 +124,9 @@ async function loadExamPaper() {
     renderInstructions(data.instructions);
     renderQuestions(data.questions);
 
-    loader.hidden = true;
     examPaper.hidden = false;
   } catch (e) {
-    loader.hidden = true;
+    console.log(e);
   }
 }
 
