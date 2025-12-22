@@ -170,6 +170,7 @@ function resetOptions() {
   const labels = document.querySelectorAll('.option-label');
   labels.forEach(label => {
     label.classList.remove('correct', 'wrong');
+    label.style.pointerEvents = '';
   });
   
   document.querySelectorAll('.option-letter').forEach(letter => {
@@ -210,10 +211,6 @@ function handleOptionClick(optionIndex) {
       }
     }
   }
-  
-  labels.forEach(label => {
-    label.style.pointerEvents = 'none';
-  });
 }
 
 opt1.addEventListener('click', () => handleOptionClick(0));
@@ -223,8 +220,12 @@ opt4.addEventListener('click', () => handleOptionClick(3));
 
 ansSub.addEventListener('click', function() {
   i++;
+  // Deselect any radio buttons
   let selected = document.querySelector("input[name='answer']:checked");
   if (selected) selected.checked = false;
+  document.querySelectorAll('.option-label').forEach(label => {
+    label.style.pointerEvents = '';
+  });
   opt1.disabled = false;
   opt2.disabled = false;
   opt3.disabled = false;
