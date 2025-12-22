@@ -225,7 +225,11 @@ ansSub.addEventListener('click', function() {
   i++;
   let selected = document.querySelector("input[name='answer']:checked");
   if (selected) selected.checked = false;
-  
+  opt1.disabled = false;
+  opt2.disabled = false;
+  opt3.disabled = false;
+  opt4.disabled = false;
+  ansSub.disabled = true;
   resetOptions();
   updatePage();
 });
