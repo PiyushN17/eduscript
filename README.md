@@ -144,8 +144,9 @@ This approach ensures:
   - Data‑driven solution design
   - Exam‑focused innovation
   - Technical feasibility and scalability
-  - Presentation Skills
----![iibm_patna-23-12-2025-0001 (1)](https://github.com/user-attachments/assets/d8338f45-6c8e-45ff-a075-341e07ff979e)
+
+![iibm_patna-23-12-2025-0001 (1)](https://github.com/user-attachments/assets/d8338f45-6c8e-45ff-a075-341e07ff979e)
+
 ---
 
 ## 🔮 Future Enhancements
