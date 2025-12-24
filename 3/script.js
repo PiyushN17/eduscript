@@ -58,7 +58,7 @@ function handleSubjectSelection() {
 
   switch (selectedSubject) {
     case "ce":
-      selectedApiUrl = "https://pebrrhnnhjgkwhxbyunt.supabase.co/storage/v1/object/sign/API%20Data/BCA-301/1st%20Semester/CE/Exam/Exam-PST.txt?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MmZjNTBiYy0zNDI2LTQzZTYtYThkNy0zNDgxMDU2OWE5M2IiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBUEkgRGF0YS9CQ0EtMzAxLzFzdCBTZW1lc3Rlci9DRS9FeGFtL0V4YW0tUFNULnR4dCIsImlhdCI6MTc2NjM0NDQ1NCwiZXhwIjoxNzk3ODgwNDU0fQ.WJJB9XAKfLHaTSs93uPk0-bLbHTgJcJk4nVslAKg3BA";
+      selectedApiUrl = "https://pebrrhnnhjgkwhxbyunt.supabase.co/storage/v1/object/sign/API%20Data/BCA-301/1st%20Semester/CE/Exam/Exam-PST.txt?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MmZjNTBiYy0zNDI2LTQzZTYtYThkNy0zNDgxMDU2OWE5M2IiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBUEkgRGF0YS9CQ0EtMzAxLzFzdCBTZW1lc3Rlci9DRS9FeGFtL0V4YW0tUFNULnR4dCIsImlhdCI6MTc2NjU3NjA3NiwiZXhwIjoxNzk4MTEyMDc2fQ.veA83n6OV07CXNn-6JKtWftk7R4mcsi_n2VIUKhN_zM";
       break;
 
     case "ita":
@@ -169,3 +169,4 @@ function renderQuestions(questions) {
     questionsBox.appendChild(div);
   });
 }
+
